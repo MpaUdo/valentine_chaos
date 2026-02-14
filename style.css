@@ -90,7 +90,12 @@ button:hover {
 
 /* Chaos Screen */
 #chaosScreen {
-  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  /*position: fixed;*/
   inset: 0;
   background: black;
   justify-content: center;
@@ -170,4 +175,5 @@ button:hover {
 @keyframes fadeToBlack {
   to { opacity: 0; }
 }
+
 
