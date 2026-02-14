@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>A Special Message 💖</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAME INPUT SCREEN -->
+  <div id="introScreen">
+    <h1>Before we begin...</h1>
+    <input type="text" id="nameInput" placeholder="Enter your name ❤️">
+    <button onclick="startExperience()">Continue</button>
+  </div>
+
+  <!-- MAIN LOVE SCREEN -->
+  <div id="loveScreen">
+    <h1 id="title"></h1>
+    <p class="fade delay1">From the moment you walked into my life...</p>
+    <p class="fade delay2">Everything became brighter.</p>
+    <p class="fade delay3">You deserve the kind of love that feels like magic.</p>
+    <button id="confessionBtn" class="fade delay4">I have something to tell you...</button>
+    <div id="proposal" class="fade delay4">
+  <h2>Will you be mine forever? 💘</h2>
+  <button id="yesBtn">Yes ❤️</button>
+  <button id="noBtn">No 💀</button>
+</div>
+
+  </div>
+
+  
+
+  <!-- FAKE LOADING -->
+  <div id="loadingScreen">
+    <h2>Preparing your surprise...</h2>
+    <div class="progressBar">
+      <div id="progress"></div>
+    </div>
+  </div>
+
+  <!-- CHAOS SECTION -->
+  <div id="chaosScreen">
+    <video id="chaosVideo" src="chaos.mp4"></video>
+  </div>
+
+  <audio id="bgMusic" src="romantic.mp3"></audio>
+
+  <div id="hearts"></div>
+
+  <div id="credits">
+  <div class="credits-content">
+    <h1>The End</h1>
+    <p>Directed by: YOUR NAME</p>
+    <p>Starring: THEIR NAME</p>
+    <p>Produced by: Love & Chaos Studios</p>
+    <p>Special Thanks: Meme Culture</p>
+  </div>
+</div>
+
+
+  <script src="script.js"></script>
+</body>
+</html>

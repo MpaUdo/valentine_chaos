@@ -1,0 +1,168 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  overflow: hidden;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  background: linear-gradient(45deg, #ff9a9e, #fad0c4, #ffdde1, #fccb90);
+  background-size: 400% 400%;
+  animation: romanticGradient 15s ease infinite;
+}
+
+@keyframes romanticGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+/* SCREENS */
+#introScreen, #loveScreen, #loadingScreen, #chaosScreen {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+}
+
+#introScreen {
+  display: flex;
+}
+
+input {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 20px;
+  border: none;
+  margin: 15px;
+  text-align: center;
+}
+
+button {
+  padding: 12px 25px;
+  border-radius: 25px;
+  border: none;
+  background: white;
+  color: #ff4e50;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+/* Fade animations */
+.fade {
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+}
+
+.delay1 { animation-delay: 2s; }
+.delay2 { animation-delay: 4s; }
+.delay3 { animation-delay: 6s; }
+.delay4 { animation-delay: 8s; }
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+/* Loading Bar */
+.progressBar {
+  width: 300px;
+  height: 20px;
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+#progress {
+  width: 0%;
+  height: 100%;
+  background: red;
+}
+
+/* Chaos Screen */
+#chaosScreen {
+  position: fixed;
+  inset: 0;
+  background: black;
+  justify-content: center;
+  align-items: center;
+}
+
+#chaosVideo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Screen Shake */
+.shake {
+  animation: shake 0.3s infinite;
+}
+
+@keyframes shake {
+  0% { transform: translate(5px, 5px); }
+  25% { transform: translate(-5px, 5px); }
+  50% { transform: translate(5px, -5px); }
+  75% { transform: translate(-5px, -5px); }
+  100% { transform: translate(5px, 5px); }
+}
+
+/* Floating Hearts */
+#hearts {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.heart {
+  position: absolute;
+  bottom: -20px;
+  color: white;
+  font-size: 20px;
+  animation: floatUp linear infinite;
+  opacity: 0.8;
+}
+
+@keyframes floatUp {
+  to {
+    transform: translateY(-110vh);
+    opacity: 0;
+  }
+}
+
+
+#credits {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: black;
+  color: white;
+  overflow: hidden;
+}
+
+.credits-content {
+  position: absolute;
+  bottom: -100%;
+  width: 100%;
+  text-align: center;
+  animation: scrollCredits 10s linear forwards;
+}
+
+@keyframes scrollCredits {
+  to { bottom: 100%; }
+}
+
+.fadeBlack {
+  animation: fadeToBlack 1s forwards;
+}
+
+@keyframes fadeToBlack {
+  to { opacity: 0; }
+}
